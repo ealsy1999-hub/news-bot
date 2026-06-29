@@ -1,1 +1,6 @@
+requests
+feedparser
+groq
+python-dotenv
+python-telegram-bot
 flask
