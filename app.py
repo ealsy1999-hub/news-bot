@@ -1,6 +1,9 @@
 import threading
 import os
+import sys
 from flask import Flask
+
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "src"))
 
 flask_app = Flask(__name__)
 
@@ -15,5 +18,5 @@ def run_flask():
 if __name__ == "__main__":
     t = threading.Thread(target=run_flask, daemon=True)
     t.start()
-    from src.bot import main
+    from bot import main
     main()
